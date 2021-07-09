@@ -2,7 +2,7 @@
 
 ## FrontEnd hospedado
 
-### Netlify - https://restaurantes-locais.netlify.com/
+### Netlify - https://restaurantes-locais.netlify.app
 
 ## Tecnologia utilizada 
 
