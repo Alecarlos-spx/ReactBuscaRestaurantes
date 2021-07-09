@@ -16,14 +16,16 @@ export const MapContainer = (props) => {
       searchByQuery(query);
     }
     // eslint-disable-next-line no-use-before-define
-  }, [query, searchByQuery]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
 
   useEffect(() => {
     if (placeId) {
       // eslint-disable-next-line no-use-before-define
       getRestaurantById(placeId);
     } // eslint-disable-next-line no-use-before-define
-  }, [getRestaurantById, placeId]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [placeId]);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   function getRestaurantById(placeId) {
