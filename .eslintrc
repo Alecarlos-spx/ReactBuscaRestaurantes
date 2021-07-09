@@ -25,7 +25,7 @@
     "react/sort-prop-types": [
       "error",
       {
-        "ignoreCase": false
+        "ignoreCase": true
       }
     ],
     "import/no-extraneous-dependencies": [

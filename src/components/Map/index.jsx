@@ -15,14 +15,17 @@ export const MapContainer = (props) => {
       // eslint-disable-next-line no-use-before-define
       searchByQuery(query);
     }
-  }, [query]);
+    // eslint-disable-next-line no-use-before-define
+  }, [query, searchByQuery]);
 
   useEffect(() => {
     if (placeId) {
+      // eslint-disable-next-line no-use-before-define
       getRestaurantById(placeId);
-    }
-  }, [placeId]);
+    } // eslint-disable-next-line no-use-before-define
+  }, [getRestaurantById, placeId]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function getRestaurantById(placeId) {
     const service = new google.maps.places.PlacesService(map);
     dispach(setRestaurant(null));
@@ -39,6 +42,7 @@ export const MapContainer = (props) => {
     });
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function searchByQuery(query) {
     const service = new google.maps.places.PlacesService(map);
     dispach(setRestaurants([]));
